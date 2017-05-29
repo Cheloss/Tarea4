@@ -45,10 +45,10 @@
       <br>
       <p><strong>Font-Family</strong></p>
       <select name="font_family" id="font_family" class="form-control">
-        <option>Seleccione tipografía</option>
-        <option>"Times New Roman", Times, serif</option>
-        <option>Arial, Helvetica, sans-serif</option>
-        <option>Impact, Charcoal, sans-serif </option>
+        <option value='"Helvetica Neue",Helvetica,Arial,sans-serif'>Seleccione tipografía</option>
+        <option value='"Times New Roman", Times, serif'>"Times New Roman", Times, serif</option>
+        <option value="Arial, Helvetica, sans-serif">Arial, Helvetica, sans-serif</option>
+        <option value="Impact, Charcoal, sans-serif">Impact, Charcoal, sans-serif </option>
       </select>
       <br>
       <p><strong>Background-color</strong></p>
@@ -88,6 +88,13 @@
     fontSize = fontSize - 1 + "px";
     $('p').css({'font-size':fontSize});
     $('li').css({'font-size':fontSize});});
+</script>
+<script type="text/javascript">
+$("#font_family").change(function() {
+    //alert($(this).val());
+    $('.container').css("font-family", $(this).val());
+
+});
 </script>
   </body>
 
